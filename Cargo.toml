@@ -1,0 +1,10 @@
+[workspace]
+members = [
+    "01_dasar_rust",
+    "02_ownership",
+    "03_structs_enums",
+    "04_intermediate",
+    "05_modern_rust",
+    "06_crud_app",
+]
+resolver = "2"

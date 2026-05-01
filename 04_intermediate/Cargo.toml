@@ -1,0 +1,7 @@
+[package]
+name = "modul_04_intermediate"
+version = "0.1.0"
+edition = "2021"
+default-run = "modul_04_intermediate"
+
+[dependencies]
