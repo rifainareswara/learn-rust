@@ -22,17 +22,29 @@ fn latihan_1() {
 
     // TODO: deklarasikan variabel `nama` (immutable) berisi namamu
     // let nama = ...;
+    let nama = "rifai";
 
     // TODO: deklarasikan variabel `umur` (mutable) berisi umurmu
     // let mut umur = ...;
+    let mut umur = 30;
 
     // TODO: tambah 1 ke umur
     // umur += 1;
+    umur += 1;
 
     // TODO: cetak: "Nama: [nama], Umur: [umur]"
     // println!(...);
+    println!("Nama: {}", nama);
+    println!("Umur: {}", umur);
 
     println!(); // jangan hapus baris ini
+
+    let nama_panjang = "Rizqi Nur Rifai";
+    let mut umur_sekarang = 30;
+    umur_sekarang += 1;
+
+    println!("Nama Panjang : {}", nama_panjang);
+    println!("Umur Sekarang : {}", umur_sekarang);
 }
 
 // ── Latihan 2 ──────────────────────────────────────────
@@ -44,11 +56,16 @@ fn latihan_2() {
     // TODO: buat tuple `jakarta` dengan data:
     //   nama = "Jakarta", populasi = 10_500_000, luas = 664.01
     // let jakarta = ...;
+    let jakarta: (&str, u32, f64) = ("Jakarta", 10_500_000, 664.01);
+
 
     // TODO: cetak "Kota: [nama], Populasi: [pop], Luas: [luas] km²"
     // println!(...);
-
+    println!("Kota: {}, Populasi {}, Luas {}", jakarta.0, jakarta.1, jakarta.2);
     println!();
+
+    let bandung = ("Bandung", 20_200_200, 555.55, true);
+    println!("Kota: {}, Populasi: {}, Luas: {}, Dipulau jawa: {}", bandung.0, bandung.1, bandung.2, bandung.3);
 }
 
 // ── Latihan 3 ──────────────────────────────────────────
@@ -60,14 +77,16 @@ fn latihan_3() {
 
     // TODO: panggil celcius_ke_fahrenheit dengan 0.0, 100.0, 37.0
     // dan cetak hasilnya dalam format: "[C]°C = [F]°F"
-
+    for c in [0.0, 100.0, 37.0] {
+        let f: f64 = celcius_ke_fahrenheit(c);
+        println!("{}°C = {:.1}°F", c, f);
+    };
     println!();
 }
 
-// TODO: definisikan fungsi celcius_ke_fahrenheit di sini
-// fn celcius_ke_fahrenheit(c: f64) -> f64 {
-//     ...
-// }
+fn celcius_ke_fahrenheit(c: f64) -> f64 {
+    (c * 9.0 / 5.0) + 32.0
+}
 
 // ── Latihan 4 ──────────────────────────────────────────
 // Gunakan loop for untuk mencetak bilangan 1-10,
